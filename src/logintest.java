@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.net.URL;
 import java.util.List;
 
 public class logintest {
@@ -19,11 +20,6 @@ public class logintest {
         String err_msg = driver.findElement(By.xpath("//*[@data-test='error']")).getText();
         System.out.println(err_msg);
 
-        List<WebElement> productElements = driver.findElements(By.xpath("//*[@id='item_"+"_title_link']/div"));
-        for (WebElement productElement : productElements) {
-            String product_name = productElement.findElement(By.xpath("//*[@class='inventory_item_name']")).getText();
-            System.out.println("Product Name: "+ product_name);
-        }
     }
 
 
